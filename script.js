@@ -2,7 +2,7 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 const button = document.querySelector('.saveBtn');
-const input = document.getElementById('#text-9');
+const input = document.getElementById("text-9");
 
 
 $(document).ready(function () {
@@ -10,9 +10,11 @@ $(document).ready(function () {
 // onClick function
 //var addContent = localStorage.setItem("#text-9", addContent9);
 
-var addContent9 = document.getElementById("#text-9");
-localStorage.setItem("#text-9", input.val());
-return addContent9;
+console.log(input.value);
+localStorage.setItem("text-9", input.value);
+
+//localStorage.setItem("#text-9", input.val());
+//return addContent9;
 
 
    // alert('ho ho ho');
