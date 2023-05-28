@@ -2,27 +2,16 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 const button = document.querySelector('.saveBtn');
-const input = document.getElementById("text-9");
-
+const input9 = document.getElementById("text-9");
+const input10 = document.getElementById("text-10");
+const input11 = document.getElementById("text-11");
 
 $(document).ready(function () {
-  $('.saveBtn').click(function() {
-// onClick function
-//var addContent = localStorage.setItem("#text-9", addContent9);
-
-console.log(input.value);
-localStorage.setItem("text-9", input.value);
-
-//localStorage.setItem("#text-9", input.val());
-//return addContent9;
-
-
-   // alert('ho ho ho');
+  $('.saveBtn').click(function() {    // onClick function
+localStorage.setItem("text-9", input9.value) || // using OR logic to save text into local storage for different text areas
+localStorage.setItem("text-10", input10.value) ||
+localStorage.setItem("text-11", input11.value);
 });
-
-
-
-
 
 
 
