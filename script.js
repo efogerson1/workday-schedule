@@ -5,6 +5,7 @@ const button = document.querySelector('.saveBtn');
 const input9 = document.getElementById("text-9");
 const input10 = document.getElementById("text-10");
 const input11 = document.getElementById("text-11");
+const savedData = [input9, input10, input11];
 
 $(document).ready(function () {
   $('.saveBtn').click(function() {    // onClick function
@@ -13,8 +14,12 @@ localStorage.setItem("text-10", input10.value) ||
 localStorage.setItem("text-11", input11.value);
 });
 
+var userData = JSON.parse(localStorage.getItem());
+function printToPage(){
+  userData = JSON.parse(localStorage.getItem(savedData));
+}
 
-
+printToPage();
 
 
 
