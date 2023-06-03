@@ -80,11 +80,36 @@ printToPage();
 var today = dayjs();
 $('#currentDay').text(today.format('MMM D, YYYY'));
 
- var now = dayjs();
- var hours = [9,10,11,12,13,14,15,16,17];
+ const now = dayjs().hour();
+ const hours = [9,10,11,12,13,14,15,16,17];
 
-for (let i = 0; i < hours.length; i++)
-  if (now < getElementById("hour-9" === 9)){
-    $("#hour-9").addClass(".past");
+for (let i = 0; i < hours.length; i++){
 
+}
+  if (now > document.getElementById("9")){
+    $(attr.parseInt('9')).addClass(".past");
   }
+
+for (let i = 0; i < hours.length; i++){
+
+}
+  if (now > document.getElementById("10")){
+    $(attr.parseInt('10')).addClass(".past");
+  }
+
+  const timeBlockContainerEl = document.getElementById("all-time-blocks")
+  console.log("time-block-container", timeBlockContainerEl)
+  console.log("time-block-containerEl.children", timeBlockContainerEl.children)
+  console.log("timeBlockContainerEl.children.length", timeBlockContainerEl.children.length)
+  console.log("time-block-containerEl.children[0]", timeBlockContainerEl.children[0])
+  for (let i = 0; i < timeBlockContainerEl.children.length; i++) {
+    console.log(timeBlockContainerEl.children[i])
+  }
+
+
+// changing the children's id's to just a number means that all you have to do is use a built-in function like parseInt() to transform that string into a number
+
+// use either javascript or jquery amd access the children's id and 
+// compare it to your current time const now = dayjs().hour() , and if the now variable is greater then the child's id, 
+// use past class, else if its less than, use future class, else use present class.
+
