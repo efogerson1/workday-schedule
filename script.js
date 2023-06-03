@@ -55,18 +55,7 @@ function printToPage(){
   userData17 = localStorage.getItem('text-17');
   input17.textContent = userData17;
 }
-
 printToPage();
-
-
-
-
-
-
-
-
-
-
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -87,3 +76,15 @@ printToPage();
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+var today = dayjs();
+$('#currentDay').text(today.format('MMM D, YYYY'));
+
+ var now = dayjs();
+ var hours = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+
+for (let i = 0; i < hours.length; i++)
+  if (now <= getElementById("hour-9")){
+    $("#hour-9").addClass(".past");
+
+  }
