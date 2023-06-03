@@ -81,10 +81,10 @@ var today = dayjs();
 $('#currentDay').text(today.format('MMM D, YYYY'));
 
  var now = dayjs();
- var hours = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+ var hours = [9,10,11,12,13,14,15,16,17];
 
 for (let i = 0; i < hours.length; i++)
-  if (now <= getElementById("hour-9")){
+  if (now < getElementById("hour-9" === 9)){
     $("#hour-9").addClass(".past");
 
   }
