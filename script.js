@@ -77,26 +77,8 @@ printToPage();
   // TODO: Add code to display the current date in the header of the page.
 });
 
-/* var today = dayjs();
+var today = dayjs();
 $('#currentDay').text(today.format('MMM D, YYYY'));
-
- const currentHour = dayjs().hour();
- const hours = [9,10,11,12,13,14,15,16,17];
- var elements = document.getElementsByClassName('all-time-blocks')
-
-for (let i = 0; i < hours.length; i++){
-var element = elements[i];
-
-  if (currentHour > 10){
-    element.classList.add('past');
-  }
-
-
-  if (currentHour > document.getElementById.parseInt("10")){
-    $addClass("past");
-  }
-
-} */
 
 $(document).ready(function() {
   var currentTime = dayjs();
