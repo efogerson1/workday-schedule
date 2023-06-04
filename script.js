@@ -77,25 +77,49 @@ printToPage();
   // TODO: Add code to display the current date in the header of the page.
 });
 
-var today = dayjs();
+/* var today = dayjs();
 $('#currentDay').text(today.format('MMM D, YYYY'));
 
- const now = dayjs().hour();
+ const currentHour = dayjs().hour();
  const hours = [9,10,11,12,13,14,15,16,17];
+ var elements = document.getElementsByClassName('all-time-blocks')
 
 for (let i = 0; i < hours.length; i++){
+var element = elements[i];
 
-}
-  if (now > document.getElementById("9")){
-    $(attr.parseInt('9')).addClass(".past");
+  if (currentHour > 10){
+    element.classList.add('past');
   }
 
-for (let i = 0; i < hours.length; i++){
 
-}
-  if (now > document.getElementById("10")){
-    $(attr.parseInt('10')).addClass(".past");
+  if (currentHour > document.getElementById.parseInt("10")){
+    $addClass("past");
   }
+
+} */
+
+$(document).ready(function() {
+  var currentTime = dayjs();
+
+  // Get the current hour component from the current time
+  var currentHour = currentTime.hour();
+
+  // Get all the time-block divs
+  var timeBlocks = $('.time-block');
+
+  // Iterate over the time-block divs and add or remove CSS classes based on the time of day
+  timeBlocks.each(function() {
+    var blockHour = parseInt($(this).attr('id'));
+
+    if (blockHour < currentHour) {
+      $(this).removeClass('present future').addClass('past');
+    } else if (blockHour === currentHour) {
+      $(this).removeClass('past future').addClass('present');
+    } else {
+      $(this).removeClass('past present').addClass('future');
+    }
+  });
+});
 
   const timeBlockContainerEl = document.getElementById("all-time-blocks")
   console.log("time-block-container", timeBlockContainerEl)
